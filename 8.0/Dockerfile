@@ -20,7 +20,6 @@ RUN apt update \
        php8.0-intl php8.0-readline \
        php8.0-ldap \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
-    && composer global require laravel/installer \
     && curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm \
